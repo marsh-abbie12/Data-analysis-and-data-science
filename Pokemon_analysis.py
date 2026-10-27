@@ -57,7 +57,13 @@ plt.show()
 #This shows us that dark types have the highest average attack with normal types the lowest. I want to now consider not just the averages
 #but the distribution of attack values for each type. I will use boxplots to do this.
 plt.figure(figsize=(12, 6))
-
+pokemon_data.boxplot(column='Attack', by='Type1', grid=False, patch_artist=True, boxprops=dict(facecolor='pink', color='black'), medianprops=dict(color='black'))
+plt.title('Distribution of Attack by Pokemon Type')
+plt.xlabel('Pokemon Type')
+plt.ylabel('Attack')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
 
 #Analysis for machine learning
 #My main aim is to create a model where we can predict if a pokemon is legendary based on key attributes. To do this
