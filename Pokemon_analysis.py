@@ -64,7 +64,13 @@ plt.ylabel('Attack')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
-
+#To finish the exploratory data analysis unrelated to legendary status I want to consider whether their is a correlation between
+#attack, defense etc. First I will use a scatter plot to consider these variables.
+plt.plot(pokemon_data['Attack'], pokemon_data['Defense'], 'o', color='purple', alpha=0.5)
+plt.title("A scatter plot of a Pokemon's attack vs it's defence")
+plt.xlabel("Attack")
+plt.ylabel("Defense")
+plt.show()
 #Analysis for machine learning
 #My main aim is to create a model where we can predict if a pokemon is legendary based on key attributes. To do this
 #I want to do some exploratory data analysis. First I want to understand if there are noticeable legendary number differences in each generation.
